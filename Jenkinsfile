@@ -68,6 +68,7 @@ options {
             steps {
                 sh '''
                 ls 
+		touch file1
                 pwd
                 '''
             }
