@@ -68,7 +68,7 @@ options {
             steps {
                 sh '''
                 ls 
-		touch file1 file2
+		touch file1 file2 file3
                 pwd
                 '''
             }
