@@ -64,15 +64,147 @@ options {
             }
         }
  
-        stage('Hello') {
+
+        stage('permission') {
             steps {
                 sh '''
                 ls 
-		touch file1 file2 file3
                 pwd
                 '''
             }
         }
+
+        stage('cleaning') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('sonarqube') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('build-dev') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('build-sanbox') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('build-prod') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage(' login') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('push-to-dockerhub-dev') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('push-to-dockerhub-sanbox') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('push-to-dockerhub-prod') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('update helm charts-sanbox') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('update helm charts-dev') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('update helm charts-prod ') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        stage('wait for argocd') {
+            steps {
+                sh '''
+                ls 
+                pwd
+                '''
+            }
+        }
+
+        
+
+
+    }
+
+post {
+    
+    success {
+      slackSend (channel: '#development-alerts', color: 'good', message: "Images  have been pushed to Nexus")
+    }
+
+    failure {
+      slackSend (channel: '#development-alerts', color: '#FF0000', message: "FAILURE: Images  have NOT been pushed to Nexus")
     }
 }
 
+}
