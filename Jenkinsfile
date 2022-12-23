@@ -30,7 +30,7 @@ options {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
-        }
+        }      
 
         stage('Setup parameters') {
             steps {
