@@ -8,7 +8,7 @@ pipeline {
 	}
 
 options {
-    buildDiscarder(logRotator(numToKeepStr: '20'))
+    buildDiscarder(logRotator(numToKeepStr: '2'))
     disableConcurrentBuilds()
     timeout (time: 60, unit: 'MINUTES')
     timestamps()
@@ -242,16 +242,16 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}$WEATHERTag
 cat <<EOF > sanbox-values.yaml           
         image:
           db:
-             repository: Mashoud27/s4-db
+             repository: devopseasylearning2021/s4-db
              tag: "$DBTag"
           ui:
-             repository: Mashoud27/s4-ui
+             repository: devopseasylearning2021/s4-ui
              tag: "$UITag"
           auth:
-             repository: Mashoud27/s4-auth
+             repository: devopseasylearning2021/s4-auth
              tag: "$AUTHTag"
           weather:
-             repository: Mashoud27/s4-weather
+             repository: devopseasylearning2021/s4-weather
              tag: "$WEATHERTag"
 EOF
                 git add -A 
@@ -284,16 +284,16 @@ EOF
 cat <<EOF > sanbox-values.yaml           
         image:
           db:
-             repository: Mashoud27/s4-db
+             repository: devopseasylearning2021/s4-db
              tag: "$DBTag"
           ui:
-             repository: Mashoud27/s4-ui
+             repository: devopseasylearning2021/s4-ui
              tag: "$UITag"
           auth:
-             repository: Mashoud27/s4-auth
+             repository: devopseasylearning2021/s4-auth
              tag: "$AUTHTag"
           weather:
-             repository: Mashoud27/s4-weather
+             repository: devopseasylearning2021/s4-weather
              tag: "$WEATHERTag"
 EOF
                 git add -A 
@@ -325,16 +325,16 @@ EOF
 cat <<EOF > sanbox-values.yaml           
         image:
           db:
-             repository: Mashoud27/s4-db
+             repository: devopseasylearning2021/s4-db
              tag: "$DBTag"
           ui:
-             repository: Mashoud27/s4-ui
+             repository: devopseasylearning2021/s4-ui
              tag: "$UITag"
           auth:
-             repository: Mashoud27/s4-auth
+             repository: devopseasylearning2021/s4-auth
              tag: "$AUTHTag"
           weather:
-             repository: Mashoud27/s4-weather
+             repository: devopseasylearning2021/s4-weather
              tag: "$WEATHERTag"
 EOF
                 git add -A 
