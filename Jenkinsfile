@@ -8,7 +8,7 @@ pipeline {
 	}
 
 options {
-    buildDiscarder(logRotator(numToKeepStr: '2'))
+    buildDiscarder(logRotator(numToKeepStr: '20'))
     disableConcurrentBuilds()
     timeout (time: 60, unit: 'MINUTES')
     timestamps()
@@ -71,6 +71,7 @@ stage('permission') {
                 sh '''
 cat permission.txt | grep -o $USER
 echo $?
+
                 '''
             }
         }
@@ -289,3 +290,4 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}$WEATHERTag
 
 	
 }
+
