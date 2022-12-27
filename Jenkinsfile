@@ -226,31 +226,129 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}$WEATHERTag
         }
 
         stage('update helm charts-dev') {
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
+
+	      steps {
+	        script {
+	          withCredentials([
+	            string(credentialsId: 's3mashoud-ubuntu-image', variable: 'TOKEN')
+	          ]) {
+
+	            sh '''
+               git config --global user.name "Mashoud27"
+                 git config --global user.email mashoudkabore27@gmail.com
+                rm -rf s4-pipeline-practise || true
+                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
+                cd s4-pipeline-practise/CHARTS
+cat <<EOF > sanbox-values.yaml           
+        image:
+          db:
+             repository: Mashoud27/s4-db
+             tag: "$DBTag"
+          ui:
+             repository: Mashoud27/s4-ui
+             tag: "$UITag"
+          auth:
+             repository: Mashoud27/s4-auth
+             tag: "$AUTHTag"
+          weather:
+             repository: Mashoud27/s4-weather
+             tag: "$WEATHERTag"
+EOF
+                git add -A 
+                git commit -m "testing jenkins"
+                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
+                  '''
+	          }
+
+	        }
+
+	      }
+
+	    }
+
 
         stage('update helm charts-sanbox') {
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
+
+	      steps {
+	        script {
+	          withCredentials([
+	            string(credentialsId: 's3mashoud-ubuntu-image', variable: 'TOKEN')
+	          ]) {
+
+	            sh '''
+               git config --global user.name "Mashoud27"
+                 git config --global user.email mashoudkabore27@gmail.com
+                rm -rf s4-pipeline-practise || true
+                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
+                cd s4-pipeline-practise/CHARTS
+cat <<EOF > sanbox-values.yaml           
+        image:
+          db:
+             repository: Mashoud27/s4-db
+             tag: "$DBTag"
+          ui:
+             repository: Mashoud27/s4-ui
+             tag: "$UITag"
+          auth:
+             repository: Mashoud27/s4-auth
+             tag: "$AUTHTag"
+          weather:
+             repository: Mashoud27/s4-weather
+             tag: "$WEATHERTag"
+EOF
+                git add -A 
+                git commit -m "testing jenkins"
+                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
+                  '''
+	          }
+
+	        }
+
+	      }
+
+	    }
 
         stage('update helm charts-prod') {
-            steps {
-                sh '''
-                ls 
-                pwd
-                '''
-            }
-        }
+
+	      steps {
+	        script {
+	          withCredentials([
+	            string(credentialsId: 's3mashoud-ubuntu-image', variable: 'TOKEN')
+	          ]) {
+
+	            sh '''
+               git config --global user.name "Mashoud27"
+                 git config --global user.email mashoudkabore27@gmail.com
+                rm -rf s4-pipeline-practise || true
+                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
+                cd s4-pipeline-practise/CHARTS
+cat <<EOF > sanbox-values.yaml           
+        image:
+          db:
+             repository: Mashoud27/s4-db
+             tag: "$DBTag"
+          ui:
+             repository: Mashoud27/s4-ui
+             tag: "$UITag"
+          auth:
+             repository: Mashoud27/s4-auth
+             tag: "$AUTHTag"
+          weather:
+             repository: Mashoud27/s4-weather
+             tag: "$WEATHERTag"
+EOF
+                git add -A 
+                git commit -m "testing jenkins"
+                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
+                  '''
+	          }
+
+	        }
+
+	      }
+
+	    }
+
 
         stage('wait for argocd') {
             steps {
