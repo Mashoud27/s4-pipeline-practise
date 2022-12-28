@@ -243,7 +243,7 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}$WEATHERTag
                 rm -rf s4-pipeline-practise || true
                 git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
                 cd s4-pipeline-practise/CHARTS
-cat <<EOF > sanbox-values.yaml           
+cat <<EOF > dev-values.yaml           
         image:
           db:
              repository: devopseasylearning2021/s4-db
@@ -335,7 +335,7 @@ EOF
                 rm -rf s4-pipeline-practise || true
                 git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
                 cd s4-pipeline-practise/CHARTS
-cat <<EOF > sanbox-values.yaml           
+cat <<EOF > prod-values.yaml           
         image:
           db:
              repository: devopseasylearning2021/s4-db
