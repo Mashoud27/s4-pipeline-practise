@@ -246,16 +246,16 @@ cat <<EOF > dev-values.yaml
         image:
           db:
              repository: devopseasylearning2021/s4-db
-             tag: "$DBTag"
+             tag: "${BUILD_NUMBER}$DBTag"
           ui:
              repository: devopseasylearning2021/s4-ui
-             tag: "$UITag"
+             tag: "${BUILD_NUMBER}$UITag"
           auth:
              repository: devopseasylearning2021/s4-auth
-             tag: "$AUTHTag"
+             tag: "${BUILD_NUMBER}$AUTHTag"
           weather:
              repository: devopseasylearning2021/s4-weather
-             tag: "$WEATHERTag"
+             tag: "${BUILD_NUMBER}$WEATHERTag"
 EOF
                 git add -A 
                 git commit -m "testing jenkins"
@@ -293,16 +293,16 @@ cat <<EOF > sanbox-values.yaml
         image:
           db:
              repository: devopseasylearning2021/s4-db
-             tag: "$DBTag"
+             tag: "${BUILD_NUMBER}$DBTag"
           ui:
              repository: devopseasylearning2021/s4-ui
-             tag: "$UITag"
+             tag: "${BUILD_NUMBER}$UITag"
           auth:
              repository: devopseasylearning2021/s4-auth
-             tag: "$AUTHTag"
+             tag: "${BUILD_NUMBER}$AUTHTag"
           weather:
              repository: devopseasylearning2021/s4-weather
-             tag: "$WEATHERTag"
+             tag: "${BUILD_NUMBER}$WEATHERTag"
 EOF
                 git add -A 
                 git commit -m "testing jenkins"
@@ -338,16 +338,16 @@ cat <<EOF > prod-values.yaml
         image:
           db:
              repository: devopseasylearning2021/s4-db
-             tag: "$DBTag"
+             tag: "${BUILD_NUMBER}$DBTag"
           ui:
              repository: devopseasylearning2021/s4-ui
-             tag: "$UITag"
+             tag: "${BUILD_NUMBER}$UITag"
           auth:
              repository: devopseasylearning2021/s4-auth
-             tag: "$AUTHTag"
+             tag: "${BUILD_NUMBER}$AUTHTag"
           weather:
              repository: devopseasylearning2021/s4-weather
-             tag: "$WEATHERTag"
+             tag: "${BUILD_NUMBER}$WEATHERTag"
 EOF
                 git add -A 
                 git commit -m "testing jenkins"
