@@ -240,7 +240,7 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}$WEATHERTag
                git config --global user.name "Mashoud27"
                  git config --global user.email mashoudkabore27@gmail.com
                 rm -rf s4-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
+                git clone  https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
                 cd s4-pipeline-practise/CHARTS
 cat <<EOF > dev-values.yaml           
         image:
@@ -287,7 +287,7 @@ EOF
                git config --global user.name "Mashoud27"
                  git config --global user.email mashoudkabore27@gmail.com
                 rm -rf s4-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
+                git clone  https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
                 cd s4-pipeline-practise/CHARTS
 cat <<EOF > sanbox-values.yaml           
         image:
@@ -332,7 +332,7 @@ EOF
                git config --global user.name "Mashoud27"
                  git config --global user.email mashoudkabore27@gmail.com
                 rm -rf s4-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
+                git clone  https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
                 cd s4-pipeline-practise/CHARTS
 cat <<EOF > prod-values.yaml           
         image:
