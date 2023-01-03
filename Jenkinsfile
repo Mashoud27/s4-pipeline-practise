@@ -83,7 +83,7 @@ echo $?
             }
         }
 
-    // stage('SonarQube analysis') {
+    // stage('SonarQube analysis') {         
     //         agent {
     //             docker {
     //               image 'sonarsource/sonar-scanner-cli:4.7.0'
