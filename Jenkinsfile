@@ -260,7 +260,8 @@ EOF
                 git add -A 
                 git commit -m "testing jenkins"
 		git fetch <options> Mashoud27 s4-pipeline-practise
-                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
+                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git || true
+		
                   '''
 	          }
 
