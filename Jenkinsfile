@@ -4,7 +4,7 @@ pipeline {
             }
 
   environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')      
 	}
 
 options {
