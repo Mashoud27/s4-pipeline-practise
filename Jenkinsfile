@@ -237,30 +237,8 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}$WEATHERTag
 	          ]) {
 
 	            sh '''
-               git config --global user.name "Mashoud27"
-                 git config --global user.email mashoudkabore27@gmail.com
-                rm -rf s4-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
-                cd s4-pipeline-practise
-cat <<EOF > dev-values.yaml           
-        image:
-          db:
-             repository: devopseasylearning2021/s4-db
-             tag: "$DBTag"
-          ui:
-             repository: devopseasylearning2021/s4-ui
-             tag: "$UITag"
-          auth:
-             repository: devopseasylearning2021/s4-auth
-             tag: "$AUTHTag"
-          weather:
-             repository: devopseasylearning2021/s4-weather
-             tag: "$WEATHERTag"
-EOF
-                git add -A 
-                git commit -m "testing jenkins"
-		git fetch <options> Mashoud27 s4-pipeline-practise
-                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git || true
+             		ls
+			pwd
 		
                   '''
 	          }
@@ -285,29 +263,8 @@ EOF
 	          ]) {
 
 	            sh '''
-               git config --global user.name "Mashoud27"
-                 git config --global user.email mashoudkabore27@gmail.com
-                rm -rf s4-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
-                cd s4-pipeline-practise
-cat <<EOF > sanbox-values.yaml           
-        image:
-          db:
-             repository: devopseasylearning2021/s4-db
-             tag: "$DBTag"
-          ui:
-             repository: devopseasylearning2021/s4-ui
-             tag: "$UITag"
-          auth:
-             repository: devopseasylearning2021/s4-auth
-             tag: "$AUTHTag"
-          weather:
-             repository: devopseasylearning2021/s4-weather
-             tag: "$WEATHERTag"
-EOF
-                git add -A 
-                git commit -m "testing jenkins"
-                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
+              		ls
+			pwd
                   '''
 	          }
 
@@ -330,29 +287,9 @@ EOF
 	          ]) {
 
 	            sh '''
-               git config --global user.name "Mashoud27"
-                 git config --global user.email mashoudkabore27@gmail.com
-                rm -rf s4-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s4-pipeline-practise.git
-                cd s4-pipeline-practise
-cat <<EOF > prod-values.yaml           
-        image:
-          db:
-             repository: devopseasylearning2021/s4-db
-             tag: "$DBTag"
-          ui:
-             repository: devopseasylearning2021/s4-ui
-             tag: "$UITag"
-          auth:
-             repository: devopseasylearning2021/s4-auth
-             tag: "$AUTHTag"
-          weather:
-             repository: devopseasylearning2021/s4-weather
-             tag: "$WEATHERTag"
-EOF
-                git add -A 
-                git commit -m "testing jenkins"
-                git push https://Mashoud27:$TOKEN@github.com/Mashoud27/s4-pipeline-practise.git
+          		ls
+			pwd
+			
                   '''
 	          }
 
